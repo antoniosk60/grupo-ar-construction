@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CONTACT_EMAIL, WHATSAPP_NUMBER_DISPLAY, WHATSAPP_NUMBER_E164 } from '@/contactInfo';
+import { CONTACT_EMAIL, WHATSAPP_NUMBER_DISPLAY, WHATSAPP_NUMBER_E164 } from '../contactInfo';
 
 const Footer: React.FC = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {

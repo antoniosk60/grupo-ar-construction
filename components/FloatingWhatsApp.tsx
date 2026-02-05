@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WHATSAPP_NUMBER_E164 } from '@/contactInfo';
+import { WHATSAPP_NUMBER_E164 } from '../contactInfo';
 
 const FloatingWhatsApp: React.FC = () => {
   return (

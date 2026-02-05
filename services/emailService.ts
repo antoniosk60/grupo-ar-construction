@@ -7,7 +7,7 @@ type SendContactEmailInput = {
   composedMessage: string;
 };
 
-import { CONTACT_EMAIL } from '@/contactInfo';
+import { CONTACT_EMAIL } from '../contactInfo';
 
 function getEmailJsConfig() {
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;

@@ -1,7 +1,7 @@
 
 import React, { useMemo, useState } from 'react';
-import { buildMailtoUrl, buildWhatsAppUrl, CONTACT_EMAIL, WHATSAPP_NUMBER_DISPLAY } from '@/contactInfo';
-import { sendContactEmail } from '@/services/emailService';
+import { buildMailtoUrl, buildWhatsAppUrl, CONTACT_EMAIL, WHATSAPP_NUMBER_DISPLAY } from '../contactInfo';
+import { sendContactEmail } from '../services/emailService';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
