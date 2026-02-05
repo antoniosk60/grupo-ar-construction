@@ -1,0 +1,7 @@
+{
+  "name": "Grupo-AR Construction & Engineering",
+  "description": "A high-performance, modern web application for Grupo-AR, featuring architectural showcases, industrial service catalogs, and an AI-powered project consultant.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
