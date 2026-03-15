@@ -1,6 +1,6 @@
-export const CONTACT_EMAIL = 'angelantonioflore837@gmail.com';
-export const WHATSAPP_NUMBER_E164 = '525663812661';
-export const WHATSAPP_NUMBER_DISPLAY = '+52 56 6381 2661';
+export const CONTACT_EMAIL = 'randaleonel@gmail.com';
+export const WHATSAPP_NUMBER_E164 = '5217296853914';
+export const WHATSAPP_NUMBER_DISPLAY = '+52 1 729 685 3914';
 
 export function buildWhatsAppUrl(message: string) {
   const text = encodeURIComponent(message);
