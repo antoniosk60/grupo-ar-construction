@@ -37,7 +37,7 @@ const projects: Project[] = [
   { 
     id: '3', 
     title: 'Corporativo WiFi 6', 
-    category: 'Telecomunicaciones', 
+    category: 'Electricidad', 
     description: 'Red de alta performance empresarial', 
     fullDescription: 'Diseño y despliegue de infraestructura de red de datos Cat6a con tecnología de roaming WiFi 6 para cobertura total en áreas corporativas. Se integró un sistema de seguridad CCTV 4K con análisis de video inteligente Hikvision. Todos los nodos fueron certificados con equipo Fluke Networks para asegurar el cumplimiento de estándares internacionales.',
     services: ['WiFi 6 Enterprise', 'CCTV 4K Hikvision', 'Fibra Óptica', 'Certificación Fluke'],
