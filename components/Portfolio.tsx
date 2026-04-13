@@ -73,7 +73,7 @@ const projects: Project[] = [
   { 
     id: '6', 
     title: 'CCTV Centro Comercial', 
-    category: 'Telecomunicaciones', 
+    category: 'Electricidad', 
     description: 'Sistema de videovigilancia IP', 
     fullDescription: 'Implementación de un ecosistema de seguridad electrónica centralizado para un centro comercial de gran afluencia. Instalación de cámaras IP con visión nocturna avanzada, reconocimiento de placas vehiculares y centro de monitoreo 24/7 con capacidad de almacenamiento redundante.',
     services: ['Seguridad Electrónica', 'Reconocimiento Facial', 'Servidores de Video', 'Monitoreo Centralizado'],
