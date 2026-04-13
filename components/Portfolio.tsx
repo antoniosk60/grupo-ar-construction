@@ -25,7 +25,7 @@ const projects: Project[] = [
   { 
     id: '2', 
     title: 'Planta Industrial Electromex', 
-    category: 'Industrial', 
+    category: 'Electricidad', 
     description: 'Subestación y automatización industrial', 
     fullDescription: 'Montaje especializado de subestación eléctrica de media tensión y cuadros de distribución de gran capacidad para planta de manufactura pesada. El alcance incluyó la instalación de sistemas de energía crítica (UPS) y la automatización de líneas de producción para optimizar el consumo energético.',
     services: ['Subestaciones', 'UPS Industrial', 'Cuadros de Control', 'Automatización'],
