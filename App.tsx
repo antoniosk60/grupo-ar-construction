@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Stats from './components/Stats';
-
+//import ChatBot from './components/ChatBot';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -45,7 +45,8 @@ const App: React.FC = () => {
         </section>
       </main>
 
-      <FloatingWhatsApp />
+     {/* <ChatBot /> */} 
+          <FloatingWhatsApp />
       <Footer />
     </div>
   );
