@@ -1,7 +1,12 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
-Disallow: /services/
-Disallow: /data/
+
+# Bloquear carpetas internas que no deben indexarse
 Disallow: /node_modules/
+Disallow: /assets/img/galeria/temp/
+Disallow: /data/
+Disallow: /services/
+Disallow: /scripts/
+
+# Sitemap principal
 Sitemap: https://grupo-ar-construction.vercel.app/sitemap.xml
