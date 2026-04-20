@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  <!-- Inicio -->
   <url>
     <loc>https://grupo-ar-construction.vercel.app/</loc>
     <lastmod>2026-04-19</lastmod>
@@ -8,25 +7,51 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Servicios -->
   <url>
-    <loc>https://grupo-ar-construction.vercel.app/#servicios</loc>
+    <loc>https://grupo-ar-construction.vercel.app/servicios</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Portafolio -->
   <url>
-    <loc>https://grupo-ar-construction.vercel.app/#portafolio</loc>
+    <loc>https://grupo-ar-construction.vercel.app/portafolio</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Contacto -->
   <url>
-    <loc>https://grupo-ar-construction.vercel.app/#contacto</loc>
+    <loc>https://grupo-ar-construction.vercel.app/contacto</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Nosotros (opcional si tienes sección) -->
+  <url>
+    <loc>https://grupo-ar-construction.vercel.app/nosotros</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Estadísticas (Stats.tsx) -->
+  <url>
+    <loc>https://grupo-ar-construction.vercel.app/estadisticas</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ChatBot (si lo usas como página) -->
+  <url>
+    <loc>https://grupo-ar-construction.vercel.app/chatbot</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
 </urlset>
