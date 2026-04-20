@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /services/
+Disallow: /data/
+Disallow: /node_modules/
 Sitemap: https://grupo-ar-construction.vercel.app/sitemap.xml
