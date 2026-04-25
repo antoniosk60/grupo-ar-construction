@@ -45,121 +45,6 @@ const imgGeneral1Png = new URL('../assets/img/galeria/general_1.png', import.met
 const imgGeneral2Jpg = new URL('../assets/img/galeria/general_2.jpg', import.meta.url).href;
 const imgGeneral2Png = new URL('../assets/img/galeria/general_2.png', import.meta.url).href;
 
-
-// ─── Nuevas Imágenes Distribuidas ──────────────────────────────────────
-const imgNewRemodelaciones1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0036.jpg', import.meta.url).href;
-const imgNewRemodelaciones2 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0037.jpg', import.meta.url).href;
-const imgNewRemodelaciones3 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0038.jpg', import.meta.url).href;
-const imgNewRemodelaciones4 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0039.jpg', import.meta.url).href;
-const imgNewRemodelaciones5 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0040.jpg', import.meta.url).href;
-const imgNewConstruccion1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0041.jpg', import.meta.url).href;
-const imgNewRemodelaciones6 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0042.jpg', import.meta.url).href;
-const imgNewRemodelaciones7 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0043.jpg', import.meta.url).href;
-const imgNewConstruccion2 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0044.jpg', import.meta.url).href;
-const imgNewRemodelaciones8 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0045.jpg', import.meta.url).href;
-const imgNewIndustrial1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0046.jpg', import.meta.url).href;
-const imgNewRemodelaciones9 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0047.jpg', import.meta.url).href;
-const imgNewRemodelaciones10 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0048.jpg', import.meta.url).href;
-const imgNewConstruccion3 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0049.jpg', import.meta.url).href;
-const imgNewConstruccion4 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0050.jpg', import.meta.url).href;
-const imgNewRemodelaciones11 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0051.jpg', import.meta.url).href;
-const imgNewConstruccion5 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0052.jpg', import.meta.url).href;
-const imgNewRemodelaciones12 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0053.jpg', import.meta.url).href;
-const imgNewRemodelaciones13 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0054.jpg', import.meta.url).href;
-const imgNewRemodelaciones14 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0055.jpg', import.meta.url).href;
-const imgNewRemodelaciones15 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0056.jpg', import.meta.url).href;
-const imgNewRemodelaciones16 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0057.jpg', import.meta.url).href;
-const imgNewConstruccion6 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0058.jpg', import.meta.url).href;
-const imgNewElectricidad1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0059.jpg', import.meta.url).href;
-const imgNewElectricidad2 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0060.jpg', import.meta.url).href;
-const imgNewRemodelaciones17 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0061.jpg', import.meta.url).href;
-const imgNewRemodelaciones18 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0062.jpg', import.meta.url).href;
-const imgNewRemodelaciones19 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0063.jpg', import.meta.url).href;
-const imgNewRemodelaciones20 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0064.jpg', import.meta.url).href;
-const imgNewRemodelaciones21 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0065.jpg', import.meta.url).href;
-const imgNewRemodelaciones22 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0066.jpg', import.meta.url).href;
-const imgNewRemodelaciones23 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0067.jpg', import.meta.url).href;
-const imgNewRemodelaciones24 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0068.jpg', import.meta.url).href;
-const imgNewElectricidad3 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0069.jpg', import.meta.url).href;
-const imgNewRemodelaciones25 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0070.jpg', import.meta.url).href;
-const imgNewRemodelaciones26 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0071.jpg', import.meta.url).href;
-const imgNewElectricidad4 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0072.jpg', import.meta.url).href;
-const imgNewElectricidad5 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0073.jpg', import.meta.url).href;
-const imgNewElectricidad6 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0074.jpg', import.meta.url).href;
-const imgNewRemodelaciones27 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0075.jpg', import.meta.url).href;
-const imgNewElectricidad7 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0076.jpg', import.meta.url).href;
-const imgNewElectricidad8 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0077.jpg', import.meta.url).href;
-const imgNewElectricidad9 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0078.jpg', import.meta.url).href;
-const imgNewConstruccion7 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0079.jpg', import.meta.url).href;
-const imgNewRemodelaciones28 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0080.jpg', import.meta.url).href;
-const imgNewRemodelaciones29 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0081.jpg', import.meta.url).href;
-const imgNewElectricidad10 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0082.jpg', import.meta.url).href;
-const imgNewRemodelaciones30 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0083.jpg', import.meta.url).href;
-const imgNewRemodelaciones31 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0084.jpg', import.meta.url).href;
-const imgNewElectricidad11 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0085.jpg', import.meta.url).href;
-const imgNewRemodelaciones32 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0086.jpg', import.meta.url).href;
-const imgNewElectricidad12 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0087.jpg', import.meta.url).href;
-const imgNewElectricidad13 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0088.jpg', import.meta.url).href;
-const imgNewEquipo1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0089.jpg', import.meta.url).href;
-const imgNewRemodelaciones33 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0090.jpg', import.meta.url).href;
-const imgNewRemodelaciones34 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0091.jpg', import.meta.url).href;
-const imgNewRemodelaciones35 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0092.jpg', import.meta.url).href;
-const imgNewRemodelaciones36 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0093.jpg', import.meta.url).href;
-const imgNewElectricidad14 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0094.jpg', import.meta.url).href;
-const imgNewConstruccion8 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0095.jpg', import.meta.url).href;
-const imgNewElectricidad15 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0096.jpg', import.meta.url).href;
-const imgNewTelecomunicaciones1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0097.jpg', import.meta.url).href;
-const imgNewTelecomunicaciones2 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0098.jpg', import.meta.url).href;
-const imgNewElectricidad16 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0099.jpg', import.meta.url).href;
-const imgNewElectricidad17 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0100.jpg', import.meta.url).href;
-const imgNewTelecomunicaciones3 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0101.jpg', import.meta.url).href;
-const imgNewConstruccion9 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0102.jpg', import.meta.url).href;
-const imgNewConstruccion10 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0103.jpg', import.meta.url).href;
-const imgNewTelecomunicaciones4 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0104.jpg', import.meta.url).href;
-const imgNewTelecomunicaciones5 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0105.jpg', import.meta.url).href;
-const imgNewRemodelaciones37 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0106.jpg', import.meta.url).href;
-const imgNewConstruccion11 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0107.jpg', import.meta.url).href;
-const imgNewConstruccion12 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0108.jpg', import.meta.url).href;
-const imgNewConstruccion13 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0109.jpg', import.meta.url).href;
-const imgNewConstruccion14 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0110.jpg', import.meta.url).href;
-const imgNewConstruccion15 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0111.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion1 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0112.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion2 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0113.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion3 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0114.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion4 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0115.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion5 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0116.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion6 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0117.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion7 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0118.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion8 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0119.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion9 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0120.jpg', import.meta.url).href;
-const imgNewRemodelaciones38 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0121.jpg', import.meta.url).href;
-const imgNewRemodelaciones39 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0122.jpg', import.meta.url).href;
-const imgNewRemodelaciones40 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0123.jpg', import.meta.url).href;
-const imgNewRemodelaciones41 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0124.jpg', import.meta.url).href;
-const imgNewRemodelaciones42 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0125.jpg', import.meta.url).href;
-const imgNewRemodelaciones43 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0126.jpg', import.meta.url).href;
-const imgNewConstruccion16 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0127.jpg', import.meta.url).href;
-const imgNewRemodelaciones44 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0128.jpg', import.meta.url).href;
-const imgNewElectricidad18 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0129.jpg', import.meta.url).href;
-const imgNewElectricidad19 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0130.jpg', import.meta.url).href;
-const imgNewRemodelaciones45 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0131.jpg', import.meta.url).href;
-const imgNewConstruccion17 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0132.jpg', import.meta.url).href;
-const imgNewConstruccion18 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0133.jpg', import.meta.url).href;
-const imgNewConstruccion19 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0134.jpg', import.meta.url).href;
-const imgNewRemodelaciones46 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0135.jpg', import.meta.url).href;
-const imgNewRemodelaciones47 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0136.jpg', import.meta.url).href;
-const imgNewRemodelaciones48 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0137.jpg', import.meta.url).href;
-const imgNewConstruccion20 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0138.jpg', import.meta.url).href;
-const imgNewConstruccion21 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0139.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion10 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0140.jpg', import.meta.url).href;
-const imgNewConstruccion22 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0141.jpg', import.meta.url).href;
-const imgNewRemodelaciones49 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0142.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion11 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0143.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion12 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0144.jpg', import.meta.url).href;
-const imgNewImpermeabilizacion13 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0145.jpg', import.meta.url).href;
-const imgNewConstruccion23 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0146.jpg', import.meta.url).href;
-const imgNewConstruccion24 = new URL('../assets/img/galeria/nuevas/IMG-20260419-WA0147.jpg', import.meta.url).href;
-
 // ─── Datos de proyectos ────────────────────────────────────────────────────────
 
 // ─── Nuevas Imágenes del Portafolio ──────────────────────────────────────────
@@ -289,26 +174,6 @@ export const projects: Project[] = [
       { url: imgElecResidencial, caption: 'Instalación eléctrica residencial certificada bajo norma NOM', phase: 'Terminado' },
       { url: imgElecIluminacion, caption: 'Iluminación LED inteligente integrada en techos', phase: 'Fase 2' },
       { url: imgElecGeneral, caption: 'Tablero de distribución eléctrica de última generación', phase: 'Fase 1' },
-    ,
-      { url: imgNewElectricidad1, caption: 'Detalle de proyecto - IMG-20260419-WA0059.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad2, caption: 'Detalle de proyecto - IMG-20260419-WA0060.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad3, caption: 'Detalle de proyecto - IMG-20260419-WA0069.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad4, caption: 'Detalle de proyecto - IMG-20260419-WA0072.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad5, caption: 'Detalle de proyecto - IMG-20260419-WA0073.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad6, caption: 'Detalle de proyecto - IMG-20260419-WA0074.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad7, caption: 'Detalle de proyecto - IMG-20260419-WA0076.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad8, caption: 'Detalle de proyecto - IMG-20260419-WA0077.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad9, caption: 'Detalle de proyecto - IMG-20260419-WA0078.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad10, caption: 'Detalle de proyecto - IMG-20260419-WA0082.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad11, caption: 'Detalle de proyecto - IMG-20260419-WA0085.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad12, caption: 'Detalle de proyecto - IMG-20260419-WA0087.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad13, caption: 'Detalle de proyecto - IMG-20260419-WA0088.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad14, caption: 'Detalle de proyecto - IMG-20260419-WA0094.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad15, caption: 'Detalle de proyecto - IMG-20260419-WA0096.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad16, caption: 'Detalle de proyecto - IMG-20260419-WA0099.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad17, caption: 'Detalle de proyecto - IMG-20260419-WA0100.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad18, caption: 'Detalle de proyecto - IMG-20260419-WA0129.jpg', phase: 'Finalizado' },
-      { url: imgNewElectricidad19, caption: 'Detalle de proyecto - IMG-20260419-WA0130.jpg', phase: 'Finalizado' },
     ],
     year: 2024,
     client: 'Privado',
@@ -345,12 +210,6 @@ export const projects: Project[] = [
       { url: imgTelecomCableado, caption: 'Tendido de cableado de red de alta velocidad', phase: 'Fase 2' },
       { url: imgTelecomTesla, caption: 'Nodos de red inalámbrica WiFi 6 instalados', phase: 'Fase 1' },
       { url: imgTelecomGeneral, caption: 'Centro de telecomunicaciones y rack principal de servidores', phase: 'Fase 1' },
-    ,
-      { url: imgNewTelecomunicaciones1, caption: 'Detalle de proyecto - IMG-20260419-WA0097.jpg', phase: 'Finalizado' },
-      { url: imgNewTelecomunicaciones2, caption: 'Detalle de proyecto - IMG-20260419-WA0098.jpg', phase: 'Finalizado' },
-      { url: imgNewTelecomunicaciones3, caption: 'Detalle de proyecto - IMG-20260419-WA0101.jpg', phase: 'Finalizado' },
-      { url: imgNewTelecomunicaciones4, caption: 'Detalle de proyecto - IMG-20260419-WA0104.jpg', phase: 'Finalizado' },
-      { url: imgNewTelecomunicaciones5, caption: 'Detalle de proyecto - IMG-20260419-WA0105.jpg', phase: 'Finalizado' },
     ],
     year: 2024,
     client: 'Tech Solutions Corp',
@@ -370,56 +229,6 @@ export const projects: Project[] = [
       { url: imgRemoPasillo, caption: 'Remodelación de pasillo con materiales de alta gama', phase: 'Fase 2' },
       { url: imgRemoDetalle, caption: 'Detalle de acabados finos en remodelación residencial', phase: 'Fase 2' },
       { url: imgRemoVista, caption: 'Vista general del espacio habitacional tras la remodelación', phase: 'Fase 1' },
-    ,
-      { url: imgNewRemodelaciones1, caption: 'Detalle de proyecto - IMG-20260419-WA0036.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones2, caption: 'Detalle de proyecto - IMG-20260419-WA0037.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones3, caption: 'Detalle de proyecto - IMG-20260419-WA0038.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones4, caption: 'Detalle de proyecto - IMG-20260419-WA0039.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones5, caption: 'Detalle de proyecto - IMG-20260419-WA0040.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones6, caption: 'Detalle de proyecto - IMG-20260419-WA0042.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones7, caption: 'Detalle de proyecto - IMG-20260419-WA0043.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones8, caption: 'Detalle de proyecto - IMG-20260419-WA0045.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones9, caption: 'Detalle de proyecto - IMG-20260419-WA0047.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones10, caption: 'Detalle de proyecto - IMG-20260419-WA0048.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones11, caption: 'Detalle de proyecto - IMG-20260419-WA0051.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones12, caption: 'Detalle de proyecto - IMG-20260419-WA0053.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones13, caption: 'Detalle de proyecto - IMG-20260419-WA0054.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones14, caption: 'Detalle de proyecto - IMG-20260419-WA0055.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones15, caption: 'Detalle de proyecto - IMG-20260419-WA0056.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones16, caption: 'Detalle de proyecto - IMG-20260419-WA0057.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones17, caption: 'Detalle de proyecto - IMG-20260419-WA0061.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones18, caption: 'Detalle de proyecto - IMG-20260419-WA0062.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones19, caption: 'Detalle de proyecto - IMG-20260419-WA0063.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones20, caption: 'Detalle de proyecto - IMG-20260419-WA0064.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones21, caption: 'Detalle de proyecto - IMG-20260419-WA0065.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones22, caption: 'Detalle de proyecto - IMG-20260419-WA0066.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones23, caption: 'Detalle de proyecto - IMG-20260419-WA0067.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones24, caption: 'Detalle de proyecto - IMG-20260419-WA0068.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones25, caption: 'Detalle de proyecto - IMG-20260419-WA0070.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones26, caption: 'Detalle de proyecto - IMG-20260419-WA0071.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones27, caption: 'Detalle de proyecto - IMG-20260419-WA0075.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones28, caption: 'Detalle de proyecto - IMG-20260419-WA0080.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones29, caption: 'Detalle de proyecto - IMG-20260419-WA0081.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones30, caption: 'Detalle de proyecto - IMG-20260419-WA0083.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones31, caption: 'Detalle de proyecto - IMG-20260419-WA0084.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones32, caption: 'Detalle de proyecto - IMG-20260419-WA0086.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones33, caption: 'Detalle de proyecto - IMG-20260419-WA0090.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones34, caption: 'Detalle de proyecto - IMG-20260419-WA0091.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones35, caption: 'Detalle de proyecto - IMG-20260419-WA0092.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones36, caption: 'Detalle de proyecto - IMG-20260419-WA0093.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones37, caption: 'Detalle de proyecto - IMG-20260419-WA0106.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones38, caption: 'Detalle de proyecto - IMG-20260419-WA0121.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones39, caption: 'Detalle de proyecto - IMG-20260419-WA0122.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones40, caption: 'Detalle de proyecto - IMG-20260419-WA0123.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones41, caption: 'Detalle de proyecto - IMG-20260419-WA0124.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones42, caption: 'Detalle de proyecto - IMG-20260419-WA0125.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones43, caption: 'Detalle de proyecto - IMG-20260419-WA0126.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones44, caption: 'Detalle de proyecto - IMG-20260419-WA0128.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones45, caption: 'Detalle de proyecto - IMG-20260419-WA0131.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones46, caption: 'Detalle de proyecto - IMG-20260419-WA0135.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones47, caption: 'Detalle de proyecto - IMG-20260419-WA0136.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones48, caption: 'Detalle de proyecto - IMG-20260419-WA0137.jpg', phase: 'Finalizado' },
-      { url: imgNewRemodelaciones49, caption: 'Detalle de proyecto - IMG-20260419-WA0142.jpg', phase: 'Finalizado' },
     ],
     year: 2023,
     client: 'Privado',
@@ -440,20 +249,6 @@ export const projects: Project[] = [
       { url: imgImperPreAntes, caption: 'Preparación de superficie para sistema de impermeabilización prefabricado', phase: 'Diagnóstico' },
       { url: imgImperPreAplica, caption: 'Aplicación técnica de rollo prefabricado asfáltico con soplete', phase: 'En proceso' },
       { url: imgImperPreDetalles, caption: 'Detalles técnicos de sellado y acabados en azotea industrial', phase: 'Terminado' },
-    ,
-      { url: imgNewImpermeabilizacion1, caption: 'Detalle de proyecto - IMG-20260419-WA0112.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion2, caption: 'Detalle de proyecto - IMG-20260419-WA0113.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion3, caption: 'Detalle de proyecto - IMG-20260419-WA0114.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion4, caption: 'Detalle de proyecto - IMG-20260419-WA0115.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion5, caption: 'Detalle de proyecto - IMG-20260419-WA0116.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion6, caption: 'Detalle de proyecto - IMG-20260419-WA0117.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion7, caption: 'Detalle de proyecto - IMG-20260419-WA0118.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion8, caption: 'Detalle de proyecto - IMG-20260419-WA0119.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion9, caption: 'Detalle de proyecto - IMG-20260419-WA0120.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion10, caption: 'Detalle de proyecto - IMG-20260419-WA0140.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion11, caption: 'Detalle de proyecto - IMG-20260419-WA0143.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion12, caption: 'Detalle de proyecto - IMG-20260419-WA0144.jpg', phase: 'Finalizado' },
-      { url: imgNewImpermeabilizacion13, caption: 'Detalle de proyecto - IMG-20260419-WA0145.jpg', phase: 'Finalizado' },
     ],
     year: 2024,
     client: 'Almacenes Industriales S.A.',
@@ -488,8 +283,6 @@ export const projects: Project[] = [
     images: [
       { url: imgEquipoTrabajo, caption: 'Personal técnico calificado y comprometido de Grupo-AR', phase: 'Core' },
       { url: imgObraEquipo, caption: 'Supervisión técnica de ingenieros en sitio de obra industrial', phase: 'Operaciones' },
-    ,
-      { url: imgNewEquipo1, caption: 'Detalle de proyecto - IMG-20260419-WA0089.jpg', phase: 'Finalizado' },
     ],
     year: 2025,
     client: 'Interno',
@@ -510,31 +303,6 @@ export const projects: Project[] = [
       { url: imgEspinal4, caption: 'Áreas recreativas infantiles y espacios de convivencia social', phase: 'Finalizado' },
       { url: imgEspinal5, caption: 'Sistema de iluminación profesional para canchas exteriores', phase: 'Finalizado' },
       { url: imgEspinal6, caption: 'Detalle de equipamiento deportivo y acabados de alta calidad', phase: 'Finalizado' },
-    ,
-      { url: imgNewConstruccion1, caption: 'Detalle de proyecto - IMG-20260419-WA0041.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion2, caption: 'Detalle de proyecto - IMG-20260419-WA0044.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion3, caption: 'Detalle de proyecto - IMG-20260419-WA0049.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion4, caption: 'Detalle de proyecto - IMG-20260419-WA0050.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion5, caption: 'Detalle de proyecto - IMG-20260419-WA0052.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion6, caption: 'Detalle de proyecto - IMG-20260419-WA0058.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion7, caption: 'Detalle de proyecto - IMG-20260419-WA0079.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion8, caption: 'Detalle de proyecto - IMG-20260419-WA0095.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion9, caption: 'Detalle de proyecto - IMG-20260419-WA0102.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion10, caption: 'Detalle de proyecto - IMG-20260419-WA0103.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion11, caption: 'Detalle de proyecto - IMG-20260419-WA0107.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion12, caption: 'Detalle de proyecto - IMG-20260419-WA0108.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion13, caption: 'Detalle de proyecto - IMG-20260419-WA0109.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion14, caption: 'Detalle de proyecto - IMG-20260419-WA0110.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion15, caption: 'Detalle de proyecto - IMG-20260419-WA0111.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion16, caption: 'Detalle de proyecto - IMG-20260419-WA0127.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion17, caption: 'Detalle de proyecto - IMG-20260419-WA0132.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion18, caption: 'Detalle de proyecto - IMG-20260419-WA0133.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion19, caption: 'Detalle de proyecto - IMG-20260419-WA0134.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion20, caption: 'Detalle de proyecto - IMG-20260419-WA0138.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion21, caption: 'Detalle de proyecto - IMG-20260419-WA0139.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion22, caption: 'Detalle de proyecto - IMG-20260419-WA0141.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion23, caption: 'Detalle de proyecto - IMG-20260419-WA0146.jpg', phase: 'Finalizado' },
-      { url: imgNewConstruccion24, caption: 'Detalle de proyecto - IMG-20260419-WA0147.jpg', phase: 'Finalizado' },
     ],
     year: 2024,
     client: 'Gubernamental',
