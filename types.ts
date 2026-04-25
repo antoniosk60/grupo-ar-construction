@@ -1,19 +1,13 @@
 
-export interface GalleryImage {
-  url: string;
-  caption?: string;
-  phase?: string;
-}
-
 export interface Project {
   id: string;
   title: string;
-  category: string;
+  // Fix: Updated category union to match the actual service areas of Grupo-AR
+  category: 'Electricidad' | 'Industrial' | 'Telecomunicaciones' | 'Remodelaciones' | 'Impermeabilización';
   description: string;
   fullDescription: string;
   services: string[];
   imageUrl: string;
-  images?: GalleryImage[];
   year: number;
   client?: string;
   location?: string;
@@ -26,3 +20,7 @@ export interface Service {
   icon: string;
 }
 
+export interface Message {
+  role: 'user' | 'model';
+  text: string;
+}

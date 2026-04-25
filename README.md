@@ -32,4 +32,5 @@ The contact form can send emails without opening the user's email app by using E
    - `VITE_EMAILJS_TEMPLATE_ID=...`
 3. In your EmailJS template, use these params:
    - `from_name`, `from_email`, `phone`, `service_type`, `message`, `composed_message`
-# Grupo AR Construcción
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/antoniosk60/grupo-ar-construction)
