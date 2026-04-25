@@ -684,5 +684,20 @@ export const projects: Project[] = [
   client: "Diversos",
   location: "México",
 },
+  {
+    id: '10',
+    title: 'Instalaciones Industriales',
+    category: 'Industrial',
+    description: 'Sistemas y mantenimiento industrial especializado',
+    fullDescription: 'Servicios técnicos para el sector industrial, incluyendo mantenimiento de sistemas críticos y optimización de infraestructura.',
+    services: ['Mantenimiento Industrial', 'Sistemas de Filtración', 'Optimización'],
+    imageUrl: imgNewIndustrial1,
+    images: [
+      { url: imgNewIndustrial1, caption: 'Instalación industrial especializada', phase: 'Finalizado' },
+    ],
+    year: 2024,
+    client: 'Industrial',
+    location: 'México',
+  },
 ];
 
