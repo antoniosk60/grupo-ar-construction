@@ -3,7 +3,7 @@ export interface Project {
   id: string;
   title: string;
   // Fix: Updated category union to match the actual service areas of Grupo-AR
-  category: 'Electricidad' | 'Industrial' | 'Telecomunicaciones' | 'Remodelaciones' | 'Impermeabilización';
+  category: 'Electricidad' | 'Industrial' | 'Telecomunicaciones' | 'Remodelaciones' | 'Impermeabilización' | 'Construcciones';
   description: string;
   fullDescription: string;
   services: string[];
