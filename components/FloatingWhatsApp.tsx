@@ -1,11 +1,10 @@
 
 import React from 'react';
-import { WHATSAPP_NUMBER_E164 } from '../contactInfo';
 
 const FloatingWhatsApp: React.FC = () => {
   return (
     <a
-      href={`https://wa.me/${WHATSAPP_NUMBER_E164}`}
+      href="https://wa.me/527296853914"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-28 right-6 z-50 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-2xl hover:bg-[#20ba5a] transition-all duration-300 hover:scale-110 active:scale-95 group"
