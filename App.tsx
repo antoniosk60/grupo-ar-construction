@@ -3,18 +3,17 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
-import ChatBot from './components/ChatBot';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import Home from './pages/Home';
-import Electricidad from './pages/Electricidad';
-import Impermeabilizaciones from './pages/Impermeabilizaciones';
-import Remodelaciones from './pages/Remodelaciones';
-import Construcciones from './pages/Construcciones';
-import ServiciosPage from './pages/ServiciosPage';
-import ProyectosPage from './pages/ProyectosPage';
-import TestimoniosPage from './pages/TestimoniosPage';
-import ContactoPage from './pages/ContactoPage';
+import Home from './components/Home';
+import Electricidad from './components/Electricidad';
+import Impermeabilizaciones from './components/Impermeabilizaciones';
+import Remodelaciones from './components/Remodelaciones';
+import Construcciones from './components/Construcciones';
+import ServiciosPage from './components/ServiciosPage';
+import ProyectosPage from './components/ProyectosPage';
+import TestimoniosPage from './components/TestimoniosPage';
+import ContactoPage from './components/ContactoPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -54,7 +53,6 @@ const AppContent: React.FC = () => {
         </Routes>
       </main>
 
-      <ChatBot />
       <FloatingWhatsApp />
       <Footer />
     </div>
