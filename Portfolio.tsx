@@ -2,19 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Project, GalleryImage } from '../types';
 import { projects } from '../data/projects';
 
-
-
-// ─── Sub-componente: Galería con navegación ────────────────────────────────────
-interface ProjectGalleryProps {
-  images: GalleryImage[];
-  projectTitle: string;
-  initialIndex?: number;
-}import React, { useState, useEffect, useCallback } from 'react';
-import { Project, GalleryImage } from '../types';
-import { projects } from '../data/projects';
-
-
-
 // ─── Sub-componente: Galería con navegación ────────────────────────────────────
 interface ProjectGalleryProps {
   images: GalleryImage[];
