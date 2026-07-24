@@ -29,11 +29,11 @@ export const Logo: React.FC<LogoProps> = ({
     lg: 'text-2xl sm:text-3xl',
     xl: 'text-3xl sm:text-4xl'
   };
-
-  const handleImageError = () => {
-    // Fallback to original uploaded asset URL if local public asset fails
-    setImgSrc(getImageUrl('input_file_0.png'));
-  };
+const handleImageError = () => {
+  // Fallback directo a la imagen en GitHub
+  setImgSrc(
+    'https://raw.githubusercontent.com/antoniosk60/grupo-ar-construction/refs/heads/main/src/assets/images/grupo_ar_oficial_logo.jpg'
+  );
 
   return (
     <div className={`inline-flex items-center gap-3 font-black font-display tracking-tight group cursor-pointer ${className}`}>
