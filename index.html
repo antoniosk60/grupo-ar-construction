@@ -8,9 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
+        html, body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        img {
+            image-rendering: -webkit-optimize-contrast;
+            content-visibility: auto;
         }
         section {
             scroll-margin-top: 80px;
@@ -25,6 +32,16 @@
         }
         .animate-float {
             animation: float 6s ease-in-out infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
         }
         .glass-card {
             background: rgba(255, 255, 255, 0.7);

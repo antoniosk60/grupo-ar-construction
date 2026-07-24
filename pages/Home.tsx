@@ -2,11 +2,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
+import MarqueeTicker from '../components/MarqueeTicker';
+import EngineeringInteractiveHub from '../components/EngineeringInteractiveHub';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Stats from '../components/Stats';
 import Contact from '../components/Contact';
+import FloatingSupportDock from '../components/FloatingSupportDock';
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +23,14 @@ const Home: React.FC = () => {
 
       <section id="inicio">
         <Hero />
+      </section>
+
+      {/* Dynamic Industrial Marquee Ticker */}
+      <MarqueeTicker />
+
+      {/* Interactive Command Center / Division Hub */}
+      <section className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+        <EngineeringInteractiveHub />
       </section>
 
       <section id="servicios" className="py-16 sm:py-24 bg-white">
@@ -39,6 +50,9 @@ const Home: React.FC = () => {
       <section id="contacto" className="py-16 sm:py-24 bg-white overflow-hidden">
         <Contact />
       </section>
+
+      {/* Floating 24/7 Engineering Support Dock */}
+      <FloatingSupportDock />
     </>
   );
 };

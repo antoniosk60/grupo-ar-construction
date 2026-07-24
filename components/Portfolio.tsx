@@ -249,7 +249,7 @@ const Portfolio: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="p-10">
+            <div className="p-6 sm:p-10">
                <div className="flex items-center justify-between mb-4">
                  <span className="px-3 py-1 bg-amber-500/10 text-amber-600 text-[10px] font-black uppercase tracking-widest rounded-full">{project.category}</span>
                  <span className="text-slate-400 text-[10px] font-bold">{project.year}</span>

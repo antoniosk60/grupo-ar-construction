@@ -121,14 +121,14 @@ export const getImageUrl = (url: string): string => {
     const parts = url.split('/file/d/');
     if (parts[1]) {
       const fileId = parts[1].split('/')[0].replace(/^x22/, '').trim();
-      return `https://lh3.googleusercontent.com/d/${fileId}`;
+      return `https://lh3.googleusercontent.com/d/${fileId}=s1600`;
     }
   }
 
   const normalized = normalizeKey(url);
   const driveId = DRIVE_MAP[normalized];
   if (driveId) {
-    return `https://lh3.googleusercontent.com/d/${driveId}`;
+    return `https://lh3.googleusercontent.com/d/${driveId}=s1600`;
   }
 
   if (url.startsWith('input_file_')) {
@@ -149,7 +149,7 @@ export const handleImageError = (
   if (target.getAttribute('data-failed-attempts')) {
     const attempts = parseInt(target.getAttribute('data-failed-attempts') || '0', 10);
     if (attempts >= 4) {
-      target.src = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800';
+      target.src = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=90&w=1600';
       return;
     }
     target.setAttribute('data-failed-attempts', String(attempts + 1));
@@ -161,22 +161,22 @@ export const handleImageError = (
   if (currentSrc.includes('lh3.googleusercontent.com/d/')) {
     const parts = currentSrc.split('lh3.googleusercontent.com/d/');
     if (parts[1]) {
-      const fileId = parts[1].split(/[/?#]/)[0];
+      const fileId = parts[1].split(/[/?#=]/)[0];
       target.src = `https://docs.google.com/uc?export=view&id=${fileId}`;
       return;
     }
   }
 
-  // Fallback to high-quality polished Unsplash photos based on category
+  // Fallback to ultra-high quality polished Unsplash photos based on category
   const fallbacks: Record<string, string> = {
-    'Electricidad': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800',
-    'Industrial': 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=80&w=800',
-    'Telecomunicaciones': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800',
-    'Remodelaciones': 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800',
-    'Impermeabilización': 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800',
-    'Construcciones': 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800'
+    'Electricidad': 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=90&w=1600',
+    'Industrial': 'https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&q=90&w=1600',
+    'Telecomunicaciones': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=90&w=1600',
+    'Remodelaciones': 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=90&w=1600',
+    'Impermeabilización': 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=90&w=1600',
+    'Construcciones': 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=90&w=1600'
   };
 
   const matchedFallback = category ? fallbacks[category] : undefined;
-  target.src = matchedFallback || 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=800';
+  target.src = matchedFallback || 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=90&w=1600';
 };

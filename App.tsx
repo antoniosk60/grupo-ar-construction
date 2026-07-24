@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
-import ChatBot from './components/ChatBot';
 import Footer from './components/Footer';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Home from './pages/Home';
 import Electricidad from './pages/Electricidad';
 import Impermeabilizaciones from './pages/Impermeabilizaciones';
@@ -77,8 +75,6 @@ const AppContent: React.FC = () => {
         </Routes>
       </main>
 
-      <ChatBot />
-      <FloatingWhatsApp />
       <Footer />
     </div>
   );
