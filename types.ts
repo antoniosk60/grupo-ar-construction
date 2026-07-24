@@ -121,14 +121,14 @@ export const getImageUrl = (url: string): string => {
     const parts = url.split('/file/d/');
     if (parts[1]) {
       const fileId = parts[1].split('/')[0].replace(/^x22/, '').trim();
-      return `https://lh3.googleusercontent.com/d/${fileId}=s1600`;
+      return `https://raw.githubusercontent.com/antoniosk60/grupo-ar-construction/refs/heads/main/src/assets/images/grupo_ar_oficial_logo.jpg`;
     }
   }
 
   const normalized = normalizeKey(url);
   const driveId = DRIVE_MAP[normalized];
   if (driveId) {
-    return `https://lh3.googleusercontent.com/d/${driveId}=s1600`;
+    return `https://raw.githubusercontent.com/antoniosk60/grupo-ar-construction/refs/heads/main/src/assets/images/grupo_ar_oficial_logo.jpg`;
   }
 
   if (url.startsWith('input_file_')) {
