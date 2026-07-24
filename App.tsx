@@ -34,7 +34,11 @@ const AppContent: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-      
+  return (
+    <div className="min-h-screen flex flex-col selection:bg-amber-500 selection:text-white">
+      <Navbar isScrolled={isScrolled} />
+      <ScrollToTop />
+
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
