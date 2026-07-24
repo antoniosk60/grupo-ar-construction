@@ -3,23 +3,47 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
+import ChatBot from './components/ChatBot';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import Home from './components/Home';
-import Electricidad from './components/Electricidad';
-import Impermeabilizaciones from './components/Impermeabilizaciones';
-import Remodelaciones from './components/Remodelaciones';
-import Construcciones from './components/Construcciones';
-import ServiciosPage from './components/ServiciosPage';
-import ProyectosPage from './components/ProyectosPage';
-import TestimoniosPage from './components/TestimoniosPage';
-import ContactoPage from './components/ContactoPage';
+import Home from './pages/Home';
+import Electricidad from './pages/Electricidad';
+import Impermeabilizaciones from './pages/Impermeabilizaciones';
+import Remodelaciones from './pages/Remodelaciones';
+import Construcciones from './pages/Construcciones';
+import ServiciosPage from './pages/ServiciosPage';
+import ProyectosPage from './pages/ProyectosPage';
+import TestimoniosPage from './pages/TestimoniosPage';
+import ContactoPage from './pages/ContactoPage';
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      // Allow a brief delay for the DOM to render
+      const timer = setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 80; // Offset for sticky navbar
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
   return null;
 };
 
@@ -38,7 +62,7 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen flex flex-col selection:bg-amber-500 selection:text-white">
       <Navbar isScrolled={isScrolled} />
       <ScrollToTop />
-
+      
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -53,6 +77,7 @@ const AppContent: React.FC = () => {
         </Routes>
       </main>
 
+      <ChatBot />
       <FloatingWhatsApp />
       <Footer />
     </div>

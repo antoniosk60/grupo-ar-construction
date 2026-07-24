@@ -1,7 +1,8 @@
 {
-  "name": "Grupo-AR Construction & Engineering",
+  "name": "Grupo AR Construction and Engineering",
   "description": "A high-performance, modern web application for Grupo-AR, featuring architectural showcases, industrial service catalogs, and an AI-powered project consultant.",
-  "requestFramePermissions": [
-    "camera"
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
 }
