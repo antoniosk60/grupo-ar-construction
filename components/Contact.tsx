@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { sendContactEmail } from '../services/emailService';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ const Contact: React.FC = () => {
   });
   
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const validateField = (name: string, value: string) => {
     let error = '';
@@ -48,30 +50,43 @@ const Contact: React.FC = () => {
     return error;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate all fields on submit
+
     const newErrors: { [key: string]: string } = {};
     Object.keys(formData).forEach(key => {
-      const error = validateField(key, (formData as any)[key]);
+      const error = validateField(key, formData[key as keyof typeof formData]);
       if (error) newErrors[key] = error;
     });
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      setStatus('error');
+      setSubmitMessage('Revisa los campos marcados antes de enviar el formulario.');
       return;
     }
 
     setStatus('loading');
-    
-    // Simulate API call or form submission processing
-    setTimeout(() => {
+    setSubmitMessage('');
+
+    try {
+      await sendContactEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        serviceType: formData.type,
+        message: formData.message,
+        composedMessage: `Servicio solicitado: ${formData.type}\n\n${formData.message}`
+      });
+
       setStatus('success');
       setFormData({ name: '', email: '', phone: '', type: 'Electricidad Professional', message: '' });
       setErrors({});
       setTimeout(() => setStatus('idle'), 8000);
-    }, 1500);
+    } catch (error) {
+      setStatus('error');
+      setSubmitMessage(error instanceof Error ? error.message : 'No se pudo enviar el mensaje. Intenta de nuevo.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -246,6 +261,12 @@ const Contact: React.FC = () => {
                     )}
                   </span>
                 </button>
+
+                {status === 'error' && submitMessage && (
+                  <div aria-live="polite" className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+                    {submitMessage}
+                  </div>
+                )}
 
                 <div className="relative flex items-center gap-4 py-1 sm:py-2">
                   <div className="h-px bg-slate-100 flex-1"></div>

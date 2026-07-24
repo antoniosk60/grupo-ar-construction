@@ -8,9 +8,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('inicio');
   const location = useLocation();
-  const navigate = useNavigate();
 
   const navLinks = [
     { name: 'Inicio', href: '/' },
@@ -28,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   ];
 
   useEffect(() => {
-    // Scroll handling or section indicators aren't strictly required to intercept clicks anymore.
+    setIsOpen(false);
   }, [location.pathname]);
 
   return (
@@ -51,6 +49,8 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                 <Link
                   key={link.name}
                   to={link.href}
+                  aria-current={location.pathname === link.href ? 'page' : undefined}
+                  onClick={() => setIsOpen(false)}
                   className={`relative px-4 py-2 text-sm font-bold transition-all duration-300 group ${
                     location.pathname === link.href 
                       ? 'text-amber-500' 
@@ -64,7 +64,11 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               
               {/* Services Dropdown (Simplified for this example) */}
               <div className="relative group/dropdown px-4 py-2">
-                <button className={`text-sm font-bold transition-all duration-300 flex items-center gap-1 ${isScrolled || location.pathname !== '/' ? 'text-slate-700' : 'text-white'}`}>
+                <button
+                  type="button"
+                  aria-label="Abrir especialidades"
+                  className={`text-sm font-bold transition-all duration-300 flex items-center gap-1 ${isScrolled || location.pathname !== '/' ? 'text-slate-700' : 'text-white'}`}
+                >
                   Especialidades
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/></svg>
                 </button>
@@ -73,6 +77,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
                     <Link
                       key={service.name}
                       to={service.href}
+                      onClick={() => setIsOpen(false)}
                       className="block px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-amber-500 rounded-xl transition-all"
                     >
                       {service.name}

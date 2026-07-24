@@ -45,6 +45,13 @@ const Electricidad: React.FC = () => {
         <meta name="description" content="Servicios de instalaciones eléctricas de alta precisión, balanceo de cargas, peinado de tableros y estaciones de carga certificados bajo la norma NOM-001-SEDE por Grupo AR." />
         <meta property="og:title" content="Electricidad Industrial y Residencial | Grupo AR" />
         <meta property="og:description" content="Peinado de tableros, instalaciones residenciales e industriales autorizadas y cargadores para vehículos eléctricos." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/electricidad" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Electricidad Industrial y Residencial | Grupo AR" />
+        <meta name="twitter:description" content="Peinado de tableros, instalaciones residenciales e industriales autorizadas y cargadores para vehículos eléctricos." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/electricidad" />
       </Helmet>
 
       {/* Hero Section */}

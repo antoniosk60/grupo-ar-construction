@@ -40,6 +40,13 @@ const Remodelaciones: React.FC = () => {
         <meta name="description" content="Diseño y remodelación residencial e institucional. Albañilería fina, plafón falso, carpintería premium y micro-iluminación escénica por Grupo AR." />
         <meta property="og:title" content="Remodelaciones e Interiorismo Premium | Grupo AR" />
         <meta property="og:description" content="Reformas comerciales, oficinas, lofts y casas de alto nivel con acabados arquitectónicos sobresalientes." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/remodelaciones" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Remodelaciones e Interiorismo Premium | Grupo AR" />
+        <meta name="twitter:description" content="Reformas comerciales, oficinas, lofts y casas de alto nivel con acabados arquitectónicos sobresalientes." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/remodelaciones" />
       </Helmet>
 
       {/* Hero Section */}

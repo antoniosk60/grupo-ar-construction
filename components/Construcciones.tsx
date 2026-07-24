@@ -35,6 +35,13 @@ const Construcciones: React.FC = () => {
         <meta name="description" content="Servicios de construcción premium, estructuras especiales, obra civil y cimentación profunda. Construyendo infraestructuras fuertes y durables." />
         <meta property="og:title" content="Construcción y Obra Civil de Vanguardia | Grupo AR" />
         <meta property="og:description" content="Servicios expertos de obra civil, naves industriales y residenciales con materiales certificados y alta ingeniería." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/construcciones" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Construcción y Obra Civil de Vanguardia | Grupo AR" />
+        <meta name="twitter:description" content="Servicios expertos de obra civil, naves industriales y residenciales con materiales certificados y alta ingeniería." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/construcciones" />
       </Helmet>
 
       {/* Hero Section */}

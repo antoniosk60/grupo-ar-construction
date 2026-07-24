@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, Calculator, HelpCircle, CheckCircle } from 'lucide-react';
+import { sendContactEmail } from '../services/emailService';
 
 const ContactoPage: React.FC = () => {
   // Budget Calculator State
@@ -20,6 +21,7 @@ const ContactoPage: React.FC = () => {
     message: ''
   });
   const [formSuccess, setFormSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   // Calculator Multipliers
   const handleCalculate = () => {
@@ -47,19 +49,34 @@ const ContactoPage: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSuccess(true);
-    setTimeout(() => {
-      setFormSuccess(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    setSubmitError('');
+
+    try {
+      await sendContactEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        serviceType: `${category} • ${serviceType}`,
+        message: formData.message,
+        composedMessage: `Asunto: ${formData.subject}\n\nEspecialidad: ${category}\nTipo: ${serviceType}\nTamaño: ${size} m²\nComplejidad: ${complexity}\n\n${formData.message}`
       });
-    }, 5000);
+
+      setFormSuccess(true);
+      setTimeout(() => {
+        setFormSuccess(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      }, 5000);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : 'No se pudo enviar el mensaje. Intenta de nuevo.');
+    }
   };
 
   // WhatsApp send from calculator
@@ -77,6 +94,13 @@ const ContactoPage: React.FC = () => {
         <meta name="description" content="Ponte en contacto con Grupo AR. Utiliza nuestra calculadora de presupuesto estimada o envíanos un mensaje para agendar asesoría técnica personalizada." />
         <meta property="og:title" content="Contacto y Cotizaciones de Obra | Grupo AR" />
         <meta property="og:description" content="Inicia la cotización de tu obra residencial o industrial hoy mismo. Respuestas rápidas y asesoramiento profesional calificado." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/contacto" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contacto y Cotizaciones de Obra | Grupo AR" />
+        <meta name="twitter:description" content="Inicia la cotización de tu obra residencial o industrial hoy mismo. Respuestas rápidas y asesoramiento profesional calificado." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/contacto" />
       </Helmet>
 
       {/* Hero Section */}
@@ -188,6 +212,17 @@ const ContactoPage: React.FC = () => {
                       <p className="font-bold">¡Mensaje recibido correctamente!</p>
                       <p className="text-xs text-emerald-600 mt-1">Un ingeniero o asesor comercial del corporativo Grupo AR se pondrá en contacto contigo en un plazo menor a 24 horas.</p>
                     </div>
+                  </motion.div>
+                )}
+
+                {submitError && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    className="mb-8 p-6 rounded-3xl bg-red-50 border border-red-100 text-red-800 text-sm"
+                  >
+                    {submitError}
                   </motion.div>
                 )}
               </AnimatePresence>

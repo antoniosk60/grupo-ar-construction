@@ -77,6 +77,13 @@ const ServiciosPage: React.FC = () => {
         <meta name="description" content="Descubre nuestros servicios de Ingeniería Eléctrica de alta tensión, Obra Civil, Remodelación Premium e Impermeabilización del más alto nivel técnico." />
         <meta property="og:title" content="Nuestros Servicios Especializados | Grupo AR" />
         <meta property="og:description" content="Ofrecemos soluciones integrales de diseño, ingeniería, construcción y mantenimiento con certificaciones y garantías garantizadas." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/servicios" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Nuestros Servicios Especializados | Grupo AR" />
+        <meta name="twitter:description" content="Ofrecemos soluciones integrales de diseño, ingeniería, construcción y mantenimiento con certificaciones y garantías garantizadas." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/servicios" />
       </Helmet>
 
       {/* Hero Section */}

@@ -40,6 +40,13 @@ const Impermeabilizaciones: React.FC = () => {
         <meta name="description" content="Especialistas en impermeabilización elastomérica, mantos prefabricados SBS, sistemas reflectivos térmicos y control de filtraciones por Grupo AR." />
         <meta property="og:title" content="Sistemas de Impermeabilización Profesional | Grupo AR" />
         <meta property="og:description" content="Protege tus losas, azoteas, naves industriales y muros contra humedad extrema y filtraciones con garantía certificada." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/impermeabilizaciones" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sistemas de Impermeabilización Profesional | Grupo AR" />
+        <meta name="twitter:description" content="Protege tus losas, azoteas, naves industriales y muros contra humedad extrema y filtraciones con garantía certificada." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/impermeabilizaciones" />
       </Helmet>
 
       {/* Hero Section */}

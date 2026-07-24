@@ -96,6 +96,13 @@ const TestimoniosPage: React.FC = () => {
         <meta name="description" content="Opiniones honestas de ingenieros, arquitectos y clientes sobre las obras, proyectos eléctricos, impermeabilizaciones e instalaciones de Grupo AR." />
         <meta property="og:title" content="Testimonios y Reseñas de Clientes | Grupo AR" />
         <meta property="og:description" content="Conoce la experiencia de trabajar con nosotros. Calidad, garantía y precisión técnica avalada por nuestros clientes." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/testimonios" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Testimonios y Reseñas de Clientes | Grupo AR" />
+        <meta name="twitter:description" content="Conoce la experiencia de trabajar con nosotros. Calidad, garantía y precisión técnica avalada por nuestros clientes." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/testimonios" />
       </Helmet>
 
       {/* Hero Section */}

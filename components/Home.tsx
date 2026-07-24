@@ -16,6 +16,13 @@ const Home: React.FC = () => {
         <meta name="description" content="Grupo AR ofrece servicios líderes en proyectos de electricidad de alta densidad, telecomunicaciones, remodelación de espacios e impermeabilización industrial y residencial. Cotiza tu obra hoy." />
         <meta property="og:title" content="Grupo AR | Electricidad, Telecomunicaciones y Construcción Premium" />
         <meta property="og:description" content="Servicios especializados en electricidad, telecomunicaciones, impermeabilización y remodelación residencial e industrial." />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:url" content="https://grupo-ar-construction.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Grupo AR | Electricidad, Telecomunicaciones y Construcción Premium" />
+        <meta name="twitter:description" content="Servicios especializados en electricidad, telecomunicaciones, impermeabilización y remodelación residencial e industrial." />
+        <link rel="canonical" href="https://grupo-ar-construction.vercel.app/" />
       </Helmet>
 
       <section id="inicio">
