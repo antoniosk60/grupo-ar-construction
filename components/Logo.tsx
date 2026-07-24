@@ -14,7 +14,7 @@ export const Logo: React.FC<LogoProps> = ({
   showText = true,
   textColor
 }) => {
-  const [imgSrc, setImgSrc] = useState('/grupo_ar_logo.jpg');
+  const [imgSrc, setImgSrc] = useState('/src/assets/images/grupo_ar_official_logo_1784894081808.jpg');
 
   const sizeClasses = {
     sm: 'w-8 h-8 rounded-lg',
