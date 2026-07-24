@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
+import Logo from './Logo';
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -62,9 +63,11 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
             <Link 
               to="/"
               onClick={() => setIsOpen(false)}
-              className={`text-2xl font-black font-display tracking-tighter cursor-pointer transition-colors ${isScrolled || location.pathname !== '/' ? 'text-slate-900' : 'text-white'}`}
             >
-              GRUPO<span className="text-amber-500">-AR</span>
+              <Logo 
+                size="md" 
+                textColor={isScrolled || location.pathname !== '/' ? 'text-slate-900' : 'text-white'} 
+              />
             </Link>
           </div>
 
@@ -211,142 +214,216 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       </div>
 
       {/* Mobile Drawer Menu */}
-      <div className={`lg:hidden fixed inset-0 z-[60] transition-all duration-500 ${isOpen ? 'visible' : 'invisible pointer-events-none'}`}>
-        {/* Backdrop */}
-        <div 
-          className={`absolute inset-0 bg-slate-950/70 backdrop-blur-md transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
-          onClick={() => setIsOpen(false)}
-        ></div>
-        
-        {/* Slide-out Drawer */}
-        <div className={`absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl transition-transform duration-500 ease-out transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} flex flex-col h-full`}>
-          {/* Drawer Header */}
-          <div className="p-6 flex justify-between items-center border-b border-slate-100 shrink-0">
-            <Link 
-              to="/" 
+      <AnimatePresence>
+        {isOpen && (
+          <div className="lg:hidden fixed inset-0 z-[100]">
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-md"
               onClick={() => setIsOpen(false)}
-              className="text-xl font-black font-display tracking-tighter text-slate-900"
+            ></motion.div>
+            
+            {/* Slide-out Drawer */}
+            <motion.div 
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="absolute right-0 top-0 bottom-0 w-[88%] max-w-sm bg-slate-950 text-white shadow-2xl border-l border-slate-800 flex flex-col h-full overflow-hidden"
             >
-              GRUPO<span className="text-amber-500">-AR</span>
-            </Link>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 active:scale-95 transition-all"
-              aria-label="Cerrar menú"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          
-          {/* Drawer Body - Scrollable Links */}
-          <div className="flex-1 overflow-y-auto py-6 px-5 space-y-3">
-            {/* Inicio */}
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className={`block px-5 py-3.5 text-lg font-black rounded-2xl transition-all ${
-                location.pathname === '/' 
-                  ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
-                  : 'text-slate-800 hover:bg-slate-50'
-              }`}
-            >
-              Inicio
-            </Link>
+              {/* Background ambient glow */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-            {/* Servicios & Sub-Especialidades */}
-            <div className="rounded-2xl border border-slate-100 overflow-hidden bg-slate-50/50">
-              <div className="flex items-center justify-between pr-3">
-                <Link
-                  to="/servicios"
-                  onClick={() => setIsOpen(false)}
-                  className={`flex-1 px-5 py-3.5 text-lg font-black transition-all ${
-                    isServiceActive ? 'text-amber-500' : 'text-slate-800'
-                  }`}
-                >
-                  Servicios
-                </Link>
-                <button
-                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                  className="p-2 rounded-xl text-slate-400 hover:text-slate-600"
-                  aria-label="Desplegar especialidades"
-                >
-                  <svg 
-                    className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
+              {/* Drawer Header */}
+              <div className="p-5 sm:p-6 flex justify-between items-center border-b border-slate-800/80 shrink-0 relative z-10 bg-slate-950/90 backdrop-blur-xl">
+                <div>
+                  <Link 
+                    to="/" 
+                    onClick={() => setIsOpen(false)}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7"/>
+                    <Logo size="sm" textColor="text-white" />
+                  </Link>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Atención México 24/7</span>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2.5 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-amber-500 active:scale-90 transition-all"
+                  aria-label="Cerrar menú"
+                >
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
-
-              <AnimatePresence>
-                {mobileServicesOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="px-4 pb-3 space-y-1 border-t border-slate-100 bg-white"
+              
+              {/* Drawer Body - Scrollable Links */}
+              <div className="flex-1 overflow-y-auto p-5 space-y-4 relative z-10">
+                {/* Main Navigation Links */}
+                <div className="space-y-1.5">
+                  <Link
+                    to="/"
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl font-black text-sm transition-all ${
+                      location.pathname === '/' 
+                        ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
+                        : 'text-slate-200 hover:bg-slate-900 hover:text-amber-400'
+                    }`}
                   >
-                    <p className="pt-2 pb-1 px-3 text-[10px] font-black uppercase tracking-widest text-slate-400">Especialidades</p>
-                    {serviceLinks.map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        onClick={() => setIsOpen(false)}
-                        className={`flex items-center justify-between px-3.5 py-2.5 text-sm font-bold rounded-xl transition-all ${
-                          location.pathname === service.href 
-                            ? 'bg-amber-500/10 text-amber-600' 
-                            : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
-                        }`}
-                      >
-                        <span>{service.name}</span>
-                        {location.pathname === service.href && (
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                        )}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                    <span>Inicio</span>
+                    {location.pathname === '/' && <span className="w-2 h-2 rounded-full bg-white"></span>}
+                  </Link>
 
-            {/* Other main links */}
-            {navLinks.filter(l => l.name !== 'Inicio').map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`block px-5 py-3.5 text-lg font-black rounded-2xl transition-all ${
-                  location.pathname === link.href 
-                    ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
-                    : 'text-slate-800 hover:bg-slate-50'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+                  <Link
+                    to="/proyectos"
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl font-black text-sm transition-all ${
+                      location.pathname === '/proyectos' 
+                        ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
+                        : 'text-slate-200 hover:bg-slate-900 hover:text-amber-400'
+                    }`}
+                  >
+                    <span>Proyectos Industriales</span>
+                    {location.pathname === '/proyectos' && <span className="w-2 h-2 rounded-full bg-white"></span>}
+                  </Link>
+                </div>
+
+                {/* Servicios & Sub-Especialidades Card */}
+                <div className="rounded-2xl border border-slate-800/80 bg-slate-900/60 overflow-hidden">
+                  <div className="flex items-center justify-between pr-3">
+                    <Link
+                      to="/servicios"
+                      onClick={() => setIsOpen(false)}
+                      className={`flex-1 px-4 py-3.5 text-sm font-black transition-all ${
+                        isServiceActive ? 'text-amber-400' : 'text-slate-200'
+                      }`}
+                    >
+                      Nuestras Especialidades
+                    </Link>
+                    <button
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      className="p-2 rounded-xl text-slate-400 hover:text-white"
+                      aria-label="Desplegar especialidades"
+                    >
+                      <svg 
+                        className={`w-4 h-4 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <AnimatePresence>
+                    {mobileServicesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="px-3 pb-3 space-y-1 border-t border-slate-800/80 bg-slate-950/60"
+                      >
+                        {[
+                          { name: 'Electricidad y Potencia', href: '/electricidad', icon: '⚡' },
+                          { name: 'Impermeabilización Industrial', href: '/impermeabilizaciones', icon: '💧' },
+                          { name: 'Remodelación Corporativa', href: '/remodelaciones', icon: '🏢' },
+                          { name: 'Obra Civil e Infraestructura', href: '/construcciones', icon: '🏗️' },
+                        ].map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`flex items-center gap-3 px-3.5 py-2.5 text-xs font-bold rounded-xl transition-all ${
+                              location.pathname === service.href 
+                                ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30' 
+                                : 'text-slate-300 hover:bg-slate-900 hover:text-white'
+                            }`}
+                          >
+                            <span>{service.icon}</span>
+                            <span>{service.name}</span>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Additional Links */}
+                <div className="space-y-1.5">
+                  <Link
+                    to="/testimonios"
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl font-black text-sm transition-all ${
+                      location.pathname === '/testimonios' 
+                        ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
+                        : 'text-slate-200 hover:bg-slate-900 hover:text-amber-400'
+                    }`}
+                  >
+                    <span>Testimonios y Garantías</span>
+                    {location.pathname === '/testimonios' && <span className="w-2 h-2 rounded-full bg-white"></span>}
+                  </Link>
+
+                  <Link
+                    to="/contacto"
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center justify-between px-4 py-3.5 rounded-2xl font-black text-sm transition-all ${
+                      location.pathname === '/contacto' 
+                        ? 'bg-amber-500 text-white shadow-lg shadow-amber-500/20' 
+                        : 'text-slate-200 hover:bg-slate-900 hover:text-amber-400'
+                    }`}
+                  >
+                    <span>Contacto y Ubicación</span>
+                    {location.pathname === '/contacto' && <span className="w-2 h-2 rounded-full bg-white"></span>}
+                  </Link>
+                </div>
+
+                {/* Quick Phone Call Card */}
+                <div className="bg-slate-900/80 border border-slate-800 p-4 rounded-2xl flex items-center justify-between mt-4">
+                  <div>
+                    <p className="text-[10px] font-black uppercase tracking-wider text-slate-400">Atención Telefónica Directa</p>
+                    <a href="tel:7296853914" className="text-sm font-black text-amber-400 hover:underline">729 685 3914</a>
+                  </div>
+                  <a
+                    href="tel:7296853914"
+                    className="p-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl active:scale-95 transition-all shadow-md"
+                    aria-label="Llamar a Grupo AR"
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Drawer Footer CTA */}
+              <div className="p-5 border-t border-slate-800 shrink-0 bg-slate-950/90 relative z-10">
+                <Link
+                  to="/contacto"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white py-4 px-5 rounded-2xl text-xs font-black uppercase tracking-wider shadow-xl shadow-amber-500/20 active:scale-95 transition-all"
+                >
+                  <span>Solicitar Levantamiento Sin Costo</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </Link>
+                <p className="mt-3 text-center text-slate-500 text-[10px] font-bold uppercase tracking-widest">
+                  © {new Date().getFullYear()} Grupo AR Engineering
+                </p>
+              </div>
+            </motion.div>
           </div>
-          
-          {/* Drawer Footer CTA */}
-          <div className="p-6 border-t border-slate-100 shrink-0 bg-slate-50/50">
-            <Link
-              to="/contacto"
-              onClick={() => setIsOpen(false)}
-              className="block w-full text-center bg-amber-500 text-white px-5 py-4 rounded-2xl text-base font-black hover:bg-amber-600 active:scale-[0.98] transition-all shadow-xl shadow-amber-500/20 uppercase tracking-wide"
-            >
-              Cotizar Ahora
-            </Link>
-            <p className="mt-4 text-center text-slate-400 text-[10px] font-bold uppercase tracking-widest">
-              © {new Date().getFullYear()} Grupo AR • México
-            </p>
-          </div>
-        </div>
-      </div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

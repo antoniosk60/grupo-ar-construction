@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -8,8 +9,8 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-12">
           <div className="sm:col-span-2">
-            <Link to="/" className="text-2xl sm:text-3xl font-black font-display tracking-tighter text-white block mb-6">
-              GRUPO<span className="text-amber-500">-AR</span>
+            <Link to="/" className="inline-block mb-6">
+              <Logo size="lg" textColor="text-white" />
             </Link>
             <p className="mt-2 text-slate-400 text-base sm:text-lg leading-relaxed max-w-md mb-8">
               Expertos en soluciones integrales para electricidad, telecomunicaciones, remodelaciones e impermeabilización. Calidad y profesionalismo en cada proyecto.

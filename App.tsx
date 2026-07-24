@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PageLoader from './components/PageLoader';
 import Home from './pages/Home';
 import Electricidad from './pages/Electricidad';
 import Impermeabilizaciones from './pages/Impermeabilizaciones';
@@ -58,6 +59,7 @@ const AppContent: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col selection:bg-amber-500 selection:text-white">
+      <PageLoader />
       <Navbar isScrolled={isScrolled} />
       <ScrollToTop />
       
@@ -72,6 +74,8 @@ const AppContent: React.FC = () => {
           <Route path="/proyectos" element={<ProyectosPage />} />
           <Route path="/testimonios" element={<TestimoniosPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
+          {/* Catch-all fallback route to prevent 404 blank screens */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
 
