@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap principal
-Sitemap: https://grupo-ar-construction.vercel.app/sitemap.xml
